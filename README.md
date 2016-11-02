@@ -1,4 +1,4 @@
-# Truthtable
+# TruthTable
 
 离散数学上机实验1：利用真值表求主析取范式和主合取范式
 
@@ -19,3 +19,4 @@
 
 ## Upgrade 2016.11.2
 * 想了一下，果然还是应该把vector放private里，哈哈哈w
+* 修改了一下vector的清空方式

@@ -5,7 +5,7 @@ Truthtable::Truthtable(){
 }
 
 Truthtable::~Truthtable(){
-	var.erase(var.begin(),var.end()); // 清空var，防止vector造成的内存空洞
+	bin.clear(); // 清空var，防止vector造成的内存空洞
 }
 
 void Truthtable::get_variable_number(){
