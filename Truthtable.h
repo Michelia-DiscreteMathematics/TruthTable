@@ -7,10 +7,10 @@ class Truthtable
 {
 private:
 	int variables,length;
-	std::string putin,expression,value; 
-public:
-	std::vector<std::vector<bool>> var;
+	std::string putin,expression,value;
+	std::vector<std::vector<bool>> var; 
 
+public:
 	Truthtable();
 	~Truthtable();
 	void get_variable_number();
@@ -20,4 +20,5 @@ public:
 	void print_table();
 	void primary_disjunctive();
 	void principal_conjunctive();
+	
 };
