@@ -1,25 +1,25 @@
-#include "Truthtable.h"
+#include "Table.h"
 using namespace std;
 
-Truthtable::Truthtable(){
+Table::Table(){
 }
 
-Truthtable::~Truthtable(){
-	bin.clear(); // 清空var，防止vector造成的内存空洞
+Table::~Table(){
+	var.clear(); // 清空var，防止vector造成的内存空洞
 }
 
-void Truthtable::get_variable_number(){
+void Table::get_variable_number(){
 	cout<<"Please put in the number of the variable in your expression: ";
 	(cin>>variables).get();
 	length = int(pow(2,variables));
 }
 
-void Truthtable::get_truth(){
+void Table::get_truth(){
 	cout<<"Then type your conclusion of the tabulation(Just \'T\' and \'F\'' ! Press Enter key to finish):";
 	getline(cin,putin);
 }
 
-void Truthtable::exp_format(){
+void Table::exp_format(){
 	char str[putin.size()+1];
 	char * p = (char *)putin.c_str();
 	strcpy(str,p);
@@ -43,7 +43,7 @@ void Truthtable::exp_format(){
 	value = q;
 }
 
-void Truthtable::ergodic(){
+void Table::ergodic(){
 	int binary = length - 1; //用于遍历赋值
 	int e = binary; //遍历判断变量
 	var.resize(length);
@@ -57,7 +57,7 @@ void Truthtable::ergodic(){
 	}
 }
 
-void Truthtable::print_table(){
+void Table::print_table(){
 	cout<<"Truthtable export:"<<endl<<"┌";
 	for (int i = 0; i < variables*3; ++i){
 		cout<<"─";	
@@ -86,7 +86,7 @@ void Truthtable::print_table(){
 	cout<<"┴───┘"<<endl;
 }
 
-void Truthtable::primary_disjunctive(){
+void Table::primary_disjunctive(){
 	cout<<"primary disjunctive normal form export:"<<endl<<"T=";
 	for (int i = 0; i < length; ++i){
 		char alpha = 'P';
@@ -102,7 +102,7 @@ void Truthtable::primary_disjunctive(){
 	cout<<"\b "<<endl;
 }
 
-void Truthtable::principal_conjunctive(){
+void Table::principal_conjunctive(){
 	cout<<"principal conjunctive normal form export:"<<endl<<"T=";
 	for (int i = 0; i < length; ++i){
 		char alpha = 'P';

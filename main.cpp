@@ -1,10 +1,10 @@
-#include "Truthtable.h"
+#include "Table.h"
 using namespace std;
 
 int main(int argc, char const *argv[])
 {
 	 
-	Truthtable truth;
+	Table truth;
 	truth.get_variable_number();
 	truth.get_truth();
 	truth.exp_format();

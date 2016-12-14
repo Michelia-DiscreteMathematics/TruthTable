@@ -1,9 +1,12 @@
+#ifndef _TABLE_H
+#define _TABLE_H
+
 #include <iostream>
 #include <string>
 #include <cmath>
 #include <vector>
 
-class Truthtable
+class Table
 {
 private:
 	int variables,length;
@@ -11,8 +14,8 @@ private:
 	std::vector<std::vector<bool>> var; 
 
 public:
-	Truthtable();
-	~Truthtable();
+	Table();
+	~Table();
 	void get_variable_number();
 	void get_truth();
 	void exp_format();
@@ -22,3 +25,5 @@ public:
 	void principal_conjunctive();
 	
 };
+
+#endif
